@@ -17,7 +17,7 @@ void VisualStudio::VisualProject() {
    string buff = s;
    buff.erase(0, s.find_first_of('"') + 1);
    //ex. <clinclude include="src\*.cpp">
-	 //    ------------------->
+   //    ------------------->
 
    buff.erase(buff.find_last_of('"'), buff.find_last_of('>'));
    //ex. src\*.cpp">

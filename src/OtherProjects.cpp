@@ -19,6 +19,7 @@ struct Range
  boost::filesystem::path project_Dir;
 };
 
+
 void foundDir(boost::filesystem::path _p) {
  for (auto it : Range(_p)) {
   if (it.path().filename().string().find(".cpp") != string::npos || it.path().string().find(".h") != string::npos) {
@@ -26,6 +27,7 @@ void foundDir(boost::filesystem::path _p) {
   }
  }
 }
+
 
 //Converts the char to a number, probably exist a standard way to do this...
 int ctoi(char c) {
@@ -79,6 +81,7 @@ int ctoi(char c) {
  }
 }
 
+
 //Checks if a string contains a number
 bool ContainsNumber(string s) {
  bool buff = false;
@@ -92,6 +95,7 @@ bool ContainsNumber(string s) {
  return buff;
 }
 
+
 string OtherProjects::GetExclution(string s) {
  string buff;
  
@@ -103,6 +107,7 @@ string OtherProjects::GetExclution(string s) {
  }
  return buff;
 }
+
 
 void OtherProjects::OtherFiles() {
  string answer;
