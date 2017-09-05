@@ -21,7 +21,7 @@ void VisualStudio::VisualProject() {
 
    buff.erase(buff.find_last_of('"'), buff.find_last_of('>'));
    //ex. src\*.cpp">
-   //			   <-
+   //             <-
 
    f.open(path + buff);   //Opens the parsed file
 
