@@ -15,11 +15,13 @@ void VisualStudio::VisualProject() {
 
   if (s.find("include") != string::npos && s.find(".cpp") != string::npos || s.find(".h") != string::npos) {
    string buff = s;
-   buff.erase(0, s.find_first_of('"') + 1);  //ex. <clinclude include="src\*.cpp">
-											 //    -------------------> 
+   buff.erase(0, s.find_first_of('"') + 1);
+   //ex. <clinclude include="src\*.cpp">
+	 //    ------------------->
 
-   buff.erase(buff.find_last_of('"'), buff.find_last_of('>'));  //ex. src\*.cpp">
-																//			   <-
+   buff.erase(buff.find_last_of('"'), buff.find_last_of('>'));
+   //ex. src\*.cpp">
+   //			   <-
 
    f.open(path + buff);   //Opens the parsed file
 
