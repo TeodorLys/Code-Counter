@@ -32,7 +32,7 @@ void Parse_Arguments(char* arg[]) {
 
 void LookForProjects() {
  boost::filesystem::directory_iterator itrfiles;  //As a reference for the finding the end of the lookup directory
- 
+
  printf("Looking for Project...");
 
  //Iterates through the project folder.
@@ -52,17 +52,22 @@ void LookForProjects() {
 
 void Parse_TimeStamp() {
  string mon = __DATE__;
- mon.erase(3, mon.length());  //ex. Sep  5 2017
-							  //	   <------- 
+ mon.erase(3, mon.length());
+ //ex. Sep  5 2017
+//	   <-------
+
  transform(mon.begin(), mon.end(), mon.begin(), ::tolower);   //The first letter of the month is uppercase
 
  string year = __DATE__;
- year.erase(0, year.length() - 4);  //ex. Sep  5 2017
-									//    ------>
+ year.erase(0, year.length() - 4);
+ //ex. Sep  5 2017
+//    ------>
+
  string day = __DATE__;
- day.erase(0, 4);  
- day.erase(2, day.length());  //ex. Sep  5 2017
-							  //    --->  <----
+ day.erase(0, 4);
+ day.erase(2, day.length());
+ //ex. Sep  5 2017
+//    --->  <----
 
  int arraySize = sizeof(month) / sizeof(month[0]);
  string newMonth;
@@ -96,10 +101,10 @@ int main(int argc, char* argv[]) {
  Parse_Arguments(argv);  //Removes some of the access fat from the current directory.
 
  path = "c:\\users\\teodo\\documents\\visual studio 2017\\projects\\vgaplayer\\vgaplayer";
- 
+
  LookForProjects();
 
- 
+
  if (path == "")   //Error checking for an empty path.
   exit(-1);
 
@@ -121,7 +126,6 @@ int main(int argc, char* argv[]) {
 
  cout << "--------------------------" << endl;
  printf("Final count for %s  =  Line: %i   Characters: %i\n\n", name.c_str(), line_count, char_Count);
- 
+
  Parse_TimeStamp();
 }
-
