@@ -100,8 +100,6 @@ int main(int argc, char* argv[]) {
 
  Parse_Arguments(argv);  //Removes some of the access fat from the current directory.
 
- path = "c:\\users\\teodo\\documents\\visual studio 2017\\projects\\vgaplayer\\vgaplayer";
-
  LookForProjects();
 
 
@@ -111,10 +109,6 @@ int main(int argc, char* argv[]) {
  //Just getting the .cpp/.h files from the .vcxproj file
  if (hasVisualProject) {
   printf("Found Visual Studio Project\n");
-  //name = path;
-  //name.erase(0, name.find_last_of("\\") + 1);
-  //name += ".vcxproj.filters";
-
   path += "\\";
   VisualStudio::VisualProject();
   name.erase(name.find_first_of("."), name.length());
