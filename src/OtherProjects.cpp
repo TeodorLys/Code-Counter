@@ -84,15 +84,11 @@ int ctoi(char c) {
 
 //Checks if a string contains a number
 bool ContainsNumber(string s) {
- bool buff = false;
  for (char c : s) {
-  printf("%c", c);
   if (numList.find(c) != string::npos) {
-   buff = true;
+   return trurr;
   }
  }
-
- return buff;
 }
 
 
