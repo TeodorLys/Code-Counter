@@ -86,7 +86,7 @@ int ctoi(char c) {
 bool ContainsNumber(string s) {
  for (char c : s) {
   if (numList.find(c) != string::npos) {
-   return trurr;
+   return true;
   }
  }
 }
