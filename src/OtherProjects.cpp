@@ -29,7 +29,7 @@ void foundDir(boost::filesystem::path _p) {
 }
 
 
-//Converts the char to a number, probably exist a standard way to do this...
+//Converts the char to a number, probably exist a better way to do this...
 int ctoi(char c) {
  if (isalnum(c)) {
   switch (c)
