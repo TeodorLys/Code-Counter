@@ -43,7 +43,7 @@ void LookForProjects() {
 
   //If it finds a visual studio project
   if (itr->path().string().find(".vcxproj.filters") != string::npos) {
-   //hasVisualProject = true;
+   hasVisualProject = true;
    name = itr->path().filename().string();
   }
 
