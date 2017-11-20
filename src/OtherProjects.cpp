@@ -29,7 +29,7 @@ void foundDir(boost::filesystem::path _p) {
 }
 
 
-//Converts the char to a number, probably exist a better way to do this...
+//Converts the char to a number, probably exist a standard way to do this...
 int ctoi(char c) {
  if (isalnum(c)) {
   switch (c)
@@ -84,11 +84,15 @@ int ctoi(char c) {
 
 //Checks if a string contains a number
 bool ContainsNumber(string s) {
+ bool buff = false;
  for (char c : s) {
+  printf("%c", c);
   if (numList.find(c) != string::npos) {
-   return true;
+   buff = true;
   }
  }
+
+ return buff;
 }
 
 
