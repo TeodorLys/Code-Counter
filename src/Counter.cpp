@@ -98,7 +98,7 @@ void Parse_TimeStamp() {
 //MAIN
 int main(int argc, char* argv[]) {
 
- Parse_Arguments(argv);  //Removes some of the access fat from the current directory.
+ Parse_Arguments(argv);  //Removes some of the excess fat from the current directory.
 
  LookForProjects();
 
